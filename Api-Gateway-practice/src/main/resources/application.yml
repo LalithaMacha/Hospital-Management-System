@@ -1,0 +1,30 @@
+server:
+  port: 8484
+  
+spring:
+  application:
+    name: API_GATEWAY
+    
+  cloud:
+    gateway:
+     routes:
+        - id: PATIENT_SERVICE
+          uri: lb://PATIENT_SERVICE
+          predicates:
+                - Path=/pat/get/**
+                
+        - id: DOCTOR_SERVICE
+          uri: lb://DOCTOR_SERVICE
+          predicates:
+                - Path=/doctor/get/**
+      
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    
+      
