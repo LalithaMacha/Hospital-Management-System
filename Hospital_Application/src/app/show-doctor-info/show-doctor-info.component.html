@@ -1,0 +1,31 @@
+<div class="container-fluid">
+
+<nav class="navbar">
+    <h3 class="text-center">Welcome to DoctorInformation Page</h3>
+    <br>
+    
+    <input class="form-control" type="text" name="name" [(ngModel)]="name" (ngModelChange)="search()" 
+    placeholder="Enter name to search in database"> 
+</nav>
+
+<table class="table table-bordered">
+    <thead class="table-success">
+        <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Gender</th>
+        <th scope="col">SpecializedField</th>
+    </tr>
+    </thead >
+    <tbody class="text-body">
+        <tr *ngFor= "let doctor of doctors">
+        <td>{{doctor.id}}</td>
+        <td>{{doctor.name}}</td>
+        <td>{{doctor.age}}</td>
+        <td>{{doctor.gender}}</td>
+        <td>{{doctor.specialistField}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,13 @@
+
+.form-group{
+    margin-bottom: 5px;
+    color:rgb(10, 96, 136);
+    font-weight: bold;
+}
+.container-fluid{
+    background-color: silver;
+}
+
+.form-label{
+    margin-right:5px;
+}

@@ -1,0 +1,26 @@
+<div class="container-fluid">
+<nav class="navbar">
+    <h3>Welcome to PatientInformation Page</h3>
+    <input class="form-control" type="text" name="id" [(ngModel)]="id" (ngModelChange)="search()" 
+    placeholder="Enter patient id to search in database"> 
+</nav>
+
+<table class="table table-bordered" >
+    <thead class="table-success">
+        <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">VisitedDoctor</th>
+        <th scope="col">DateOfVisit</th>
+    </tr>
+    </thead>
+    <tbody class="text-body">
+        <tr *ngFor= "let patient of patients">
+        <td>{{patient.id}}</td>
+        <td>{{patient.name}}</td>
+        <td>{{patient.visitedDoctor}}</td>
+        <td>{{patient.dateOfVisit}}</td>
+        </tr>
+    </tbody>
+</table> 
+</div>   

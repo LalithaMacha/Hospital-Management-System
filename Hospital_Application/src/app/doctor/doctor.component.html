@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+  <form >
+    <div class="form-group">
+      <h3>Create Doctor Record</h3>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1" class="form-label">Name</label>
+      <input type="text" class="form-control"  name="name" [(ngModel)]="doctor.name" id="name" >
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1" class="form-label">Age</label>
+      <input type="text" class="form-control" name="age" [(ngModel)]="doctor.age" id="age" >
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Gender: </label>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="gender" id="radio" value="male" [(ngModel)]="doctor.gender">
+      <label class="form-check-label" for="exampleRadios1">
+      Male
+    </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio"  name="gender" id="radio" value="female" [(ngModel)]="doctor.gender">
+      <label class="form-check-label" for="exampleRadios1">
+      Female
+    </label>
+    </div>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1" class="form-label">SpecializedFiled</label>
+      <input type="text" class="form-control" id="field" name="specialistField" [(ngModel)]="doctor.specialistField" >
+    </div>
+
+    <button type="submit" (click)="saveDoctor()" class="btn btn-primary">Create</button>
+  </form>
+</div>
+</div>
+</div>
+
+
